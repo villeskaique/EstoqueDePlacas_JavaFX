@@ -1,0 +1,24 @@
+.tab-header-area .tab-header-background {
+    -fx-background-color: #000000;
+}
+.tab-pane:left *.tab-header-area {
+    -fx-padding: 0 0 0 10;
+
+    /* NO SPACE LEFT OF FIRST TAB */
+    /* -fx-padding: 0 0 0 30; */
+}
+.tab-pane:focused .tab-header-area .headers-region .tab:selected .focus-indicator {
+    -fx-border-width: 0;
+    -fx-border-insets: 0 0 0 0;
+    -fx-border-radius: 0;
+}
+tab{
+    -fx-border-radius: 0;
+}
+#header{
+    -fx-background-color: black;
+}
+button{
+    -fx-background-color: BLUE;
+    -fx-text-fill: white/;
+}
