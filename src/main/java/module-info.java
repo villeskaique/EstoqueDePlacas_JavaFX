@@ -1,7 +1,6 @@
 module br.villes.aplicativoplacas {
     requires javafx.controls;
     requires javafx.fxml;
-    requires static lombok;
     requires java.sql;
     requires com.fasterxml.jackson.databind;
 
