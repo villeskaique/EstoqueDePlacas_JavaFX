@@ -3,8 +3,6 @@
 Aplicação desktop desenvolvida em **Java 21** com interface em **JavaFX**, criada para gerenciar o estoque de placas utilizando um arquivo **JSON** como armazenamento.  
 O sistema implementa um CRUD completo e oferece uma interface simples e intuitiva para visualização, busca e manipulação dos dados.
 
----
-
 ## ✅ Funcionalidades
 
 - **Cadastro de placas**
@@ -16,8 +14,6 @@ O sistema implementa um CRUD completo e oferece uma interface simples e intuitiv
 - Interface construída com **JavaFX**
 - Operações rápidas e sem necessidade de banco de dados
 
----
-
 ## 🛠️ Tecnologias Utilizadas
 
 - **Java 21**
@@ -25,8 +21,6 @@ O sistema implementa um CRUD completo e oferece uma interface simples e intuitiv
 - **Maven**
 - **JSON** para armazenamento dos dados
 - Biblioteca de leitura/escrita JSON (Jackson, Gson ou a usada no projeto)
-
----
 
 ## ▶️ Como Executar o Projeto
 
