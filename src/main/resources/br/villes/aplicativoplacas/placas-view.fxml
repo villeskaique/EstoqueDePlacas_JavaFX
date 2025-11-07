@@ -13,166 +13,185 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 
-<AnchorPane fx:id="root" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="800.0" stylesheets="@style.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.villes.aplicativoplacas.controllers.TableController">
+<AnchorPane fx:id="root" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="800.0" stylesheets="@style.css" xmlns="http://javafx.com/javafx/21.0.9" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.villes.aplicativoplacas.controllers.TableController">
 
     <AnchorPane prefHeight="400.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
 
         <AnchorPane prefHeight="500.0" prefWidth="300.0" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-            <TabPane focusTraversable="false" prefHeight="400.0" prefWidth="200.0" side="RIGHT" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-                <tabs>
+            <TabPane focusTraversable="false" prefHeight="400.0" prefWidth="200.0" side="RIGHT"
+                     tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0"
+                     AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                <cursor>
+                    <Cursor fx:constant="DEFAULT"/>
+                </cursor>
 
-                    <Tab text="Atualizar">
-                        <content>
-                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                <Tab text="Atualizar">
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                        <VBox prefHeight="200.0" prefWidth="100.0" AnchorPane.bottomAnchor="0.0"
+                              AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0"
+                              AnchorPane.topAnchor="0.0">
+                            <Label text="Atualizar placa:">
+                                <VBox.margin>
+                                    <Insets left="10.0" top="10.0"/>
+                                </VBox.margin>
+                            </Label>
+                            <TextField fx:id="idField" promptText="id" styleClass="input-campo">
+                                <VBox.margin>
+                                    <Insets left="10.0" right="10.0" top="10.0"/>
+                                </VBox.margin>
+                            </TextField>
+
+                            <HBox alignment="CENTER" prefHeight="25.0" prefWidth="200.0">
                                 <children>
-                                    <VBox prefHeight="200.0" prefWidth="100.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-                                        <children>
-                                            <Label text="Atualizar placa:">
-                                    <VBox.margin>
-                                       <Insets left="10.0" top="10.0" />
-                                    </VBox.margin></Label>
-                                            <TextField fx:id="idField" promptText="id" styleClass="input-campo">
-                                    <VBox.margin>
-                                       <Insets left="10.0" right="10.0" top="10.0" />
-                                    </VBox.margin></TextField>
-
-                                            <HBox alignment="CENTER" prefHeight="25.0" prefWidth="200.0">
-                                                <children>
-                                                    <Button mnemonicParsing="false" onAction="#preencherCampos" prefHeight="25.0" prefWidth="70.0" styleClass="button-acoes" text="Selecionar" />
-                                                    <Button mnemonicParsing="false" onAction="#removerPlaca" prefHeight="25.0" prefWidth="70.0" styleClass="button-acoes" text="Remover">
-                                          <HBox.margin>
-                                             <Insets left="10.0" />
-                                          </HBox.margin>
-                                       </Button>
-                                                </children>
-                                    <VBox.margin>
-                                       <Insets top="10.0" />
-                                    </VBox.margin>
-                                            </HBox>
-
-                                            <TextField fx:id="attFabricante" disable="true" promptText="Fabricante" styleClass="input-campo">
-                                    <VBox.margin>
-                                       <Insets left="10.0" right="10.0" top="10.0" />
-                                    </VBox.margin></TextField>
-                                            <TextField fx:id="attCodigo" disable="true" promptText="Código da Placa" styleClass="input-campo">
-                                    <VBox.margin>
-                                       <Insets left="10.0" right="10.0" top="10.0" />
-                                    </VBox.margin></TextField>
-                                            <TextField fx:id="attTipo" disable="true" promptText="Tipo" styleClass="input-campo">
-                                    <VBox.margin>
-                                       <Insets left="10.0" right="10.0" top="10.0" />
-                                    </VBox.margin></TextField>
-                                            <TextField fx:id="attModelo" disable="true" promptText="Modelo" styleClass="input-campo">
-                                    <VBox.margin>
-                                       <Insets left="10.0" right="10.0" top="10.0" />
-                                    </VBox.margin></TextField>
-                                 <TextField fx:id="attPreco" disable="true" layoutX="10.0" layoutY="156.0" promptText="Preço" styleClass="input-campo">
-                                    <VBox.margin>
-                                       <Insets left="10.0" right="10.0" top="10.0" />
-                                    </VBox.margin>
-                                 </TextField>
-
-                                            <HBox alignment="CENTER" prefHeight="25.0" prefWidth="200.0">
-                                                <children>
-                                                    <Button mnemonicParsing="false" onAction="#atualizarPlaca" prefHeight="25.0" styleClass="button-acoes" text="Atualizar" />
-                                                </children>
-                                    <VBox.margin>
-                                       <Insets top="10.0" />
-                                    </VBox.margin>
-                                            </HBox>
-                                        </children>
-                                    </VBox>
+                                    <Button mnemonicParsing="false" onAction="#preencherCampos"
+                                            prefHeight="25.0" prefWidth="70.0" styleClass="button-acoes"
+                                            text="Selecionar"/>
+                                    <Button mnemonicParsing="false" onAction="#removerPlaca"
+                                            prefHeight="25.0" prefWidth="70.0" styleClass="button-acoes"
+                                            text="Remover">
+                                        <HBox.margin>
+                                            <Insets left="10.0"/>
+                                        </HBox.margin>
+                                    </Button>
                                 </children>
-                            </AnchorPane>
-                        </content>
-                    </Tab>
-                    <Tab text="Adicionar">
-                        <content>
-                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                <VBox.margin>
+                                    <Insets top="10.0"/>
+                                </VBox.margin>
+                            </HBox>
+
+                            <TextField fx:id="attFabricante" disable="true" promptText="Fabricante"
+                                       styleClass="input-campo">
+                                <VBox.margin>
+                                    <Insets left="10.0" right="10.0" top="10.0"/>
+                                </VBox.margin>
+                            </TextField>
+                            <TextField fx:id="attCodigo" disable="true" promptText="Código da Placa"
+                                       styleClass="input-campo">
+                                <VBox.margin>
+                                    <Insets left="10.0" right="10.0" top="10.0"/>
+                                </VBox.margin>
+                            </TextField>
+                            <TextField fx:id="attTipo" disable="true" promptText="Tipo"
+                                       styleClass="input-campo">
+                                <VBox.margin>
+                                    <Insets left="10.0" right="10.0" top="10.0"/>
+                                </VBox.margin>
+                            </TextField>
+                            <TextField fx:id="attModelo" disable="true" promptText="Modelo"
+                                       styleClass="input-campo">
+                                <VBox.margin>
+                                    <Insets left="10.0" right="10.0" top="10.0"/>
+                                </VBox.margin>
+                            </TextField>
+                            <TextField fx:id="attPreco" disable="true" layoutX="10.0" layoutY="156.0"
+                                       promptText="Preço" styleClass="input-campo">
+                                <VBox.margin>
+                                    <Insets left="10.0" right="10.0" top="10.0"/>
+                                </VBox.margin>
+                            </TextField>
+
+                            <HBox alignment="CENTER" prefHeight="25.0" prefWidth="200.0">
                                 <children>
-                                    <VBox prefHeight="200.0" prefWidth="100.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-                                        <children>
-                                            <Label styleClass="label-titulo" text="Nova Placa:">
-                                    <VBox.margin>
-                                       <Insets left="10.0" top="10.0" />
-                                    </VBox.margin></Label>
-                                            <TextField fx:id="fabricanteField" promptText="Fabricante" styleClass="input-campo">
-                                    <VBox.margin>
-                                       <Insets left="10.0" right="10.0" top="10.0" />
-                                    </VBox.margin></TextField>
-                                            <TextField fx:id="codigoField" promptText="Código da Placa" styleClass="input-campo">
-                                    <VBox.margin>
-                                       <Insets left="10.0" right="10.0" top="10.0" />
-                                    </VBox.margin></TextField>
-                                            <TextField fx:id="tipoField" promptText="Tipo" styleClass="input-campo">
-                                    <VBox.margin>
-                                       <Insets left="10.0" right="10.0" top="10.0" />
-                                    </VBox.margin></TextField>
-                                            <TextField fx:id="modeloField" promptText="Modelo" styleClass="input-campo">
-                                    <VBox.margin>
-                                       <Insets left="10.0" right="10.0" top="10.0" />
-                                    </VBox.margin></TextField>
-                                 <TextField fx:id="precoField" layoutX="10.0" layoutY="104.0" promptText="Preço" styleClass="input-campo">
-                                    <VBox.margin>
-                                       <Insets left="10.0" right="10.0" top="10.0" />
-                                    </VBox.margin>
-                                 </TextField>
-
-                                            <HBox alignment="CENTER" prefHeight="25.0" prefWidth="200.0">
-                                                <children>
-                                                    <Button fx:id="adicionar" mnemonicParsing="false" onAction="#adicionarPlaca" prefHeight="25.0" styleClass="button-acoes" text="Adicionar" />
-                                                </children>
-                                    <VBox.margin>
-                                       <Insets top="10.0" />
-                                    </VBox.margin>
-                                            </HBox>
-                                        </children>
-                                    </VBox>
+                                    <Button mnemonicParsing="false" onAction="#atualizarPlaca"
+                                            prefHeight="25.0" styleClass="button-acoes" text="Atualizar"/>
                                 </children>
-                            </AnchorPane>
-                        </content>
-                    </Tab>
-                </tabs>
-            <cursor>
-               <Cursor fx:constant="DEFAULT" />
-            </cursor>
+                                <VBox.margin>
+                                    <Insets top="10.0"/>
+                                </VBox.margin>
+                            </HBox>
+                        </VBox>
+                    </AnchorPane>
+                </Tab>
+                <Tab text="Adicionar">
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                        <VBox prefHeight="200.0" prefWidth="100.0" AnchorPane.bottomAnchor="0.0"
+                              AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0"
+                              AnchorPane.topAnchor="0.0">
+                            <Label styleClass="label-titulo" text="Nova Placa:">
+                                <VBox.margin>
+                                    <Insets left="10.0" top="10.0"/>
+                                </VBox.margin>
+                            </Label>
+                            <TextField fx:id="fabricanteField" promptText="Fabricante"
+                                       styleClass="input-campo">
+                                <VBox.margin>
+                                    <Insets left="10.0" right="10.0" top="10.0"/>
+                                </VBox.margin>
+                            </TextField>
+                            <TextField fx:id="codigoField" promptText="Código da Placa"
+                                       styleClass="input-campo">
+                                <VBox.margin>
+                                    <Insets left="10.0" right="10.0" top="10.0"/>
+                                </VBox.margin>
+                            </TextField>
+                            <TextField fx:id="tipoField" promptText="Tipo" styleClass="input-campo">
+                                <VBox.margin>
+                                    <Insets left="10.0" right="10.0" top="10.0"/>
+                                </VBox.margin>
+                            </TextField>
+                            <TextField fx:id="modeloField" promptText="Modelo" styleClass="input-campo">
+                                <VBox.margin>
+                                    <Insets left="10.0" right="10.0" top="10.0"/>
+                                </VBox.margin>
+                            </TextField>
+                            <TextField fx:id="precoField" layoutX="10.0" layoutY="104.0" promptText="Preço"
+                                       styleClass="input-campo">
+                                <VBox.margin>
+                                    <Insets left="10.0" right="10.0" top="10.0"/>
+                                </VBox.margin>
+                            </TextField>
+
+                            <HBox alignment="CENTER" prefHeight="25.0" prefWidth="200.0">
+                                <VBox.margin>
+                                    <Insets top="10.0"/>
+                                </VBox.margin>
+                                <Button fx:id="adicionar" mnemonicParsing="false"
+                                        onAction="#adicionarPlaca" prefHeight="25.0"
+                                        styleClass="button-acoes" text="Adicionar"/>
+                            </HBox>
+                        </VBox>
+                    </AnchorPane>
+                </Tab>
             </TabPane>
         </AnchorPane>
 
-        <AnchorPane prefHeight="30.0" prefWidth="400.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="300.0" AnchorPane.topAnchor="0.0">
-            <children>
-                <HBox alignment="CENTER_LEFT" maxHeight="30.0" prefHeight="30.0" prefWidth="400.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-                    <children>
-                        <Button mnemonicParsing="false" onAction="#pesquisarPlaca" prefHeight="25.0" prefWidth="50.0" text="OK">
-                     <HBox.margin>
-                        <Insets left="10.0" />
-                     </HBox.margin></Button>
-                        <TextField fx:id="pesquisaCodigoField" prefHeight="24.0" prefWidth="530.0">
-                     <HBox.margin>
-                        <Insets left="10.0" />
-                     </HBox.margin></TextField>
-                    </children>
-                </HBox>
-            </children>
+        <AnchorPane prefHeight="30.0" prefWidth="400.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="300.0"
+                    AnchorPane.topAnchor="0.0">
+            <HBox alignment="CENTER_LEFT" maxHeight="30.0" prefHeight="30.0" prefWidth="400.0"
+                  AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0"
+                  AnchorPane.topAnchor="0.0">
+                <Button mnemonicParsing="false" onAction="#pesquisarPlaca" prefHeight="25.0" prefWidth="50.0"
+                        text="OK">
+                    <HBox.margin>
+                        <Insets left="10.0"/>
+                    </HBox.margin>
+                </Button>
+                <TextField fx:id="pesquisaCodigoField" prefHeight="24.0" prefWidth="530.0">
+                    <HBox.margin>
+                        <Insets left="10.0"/>
+                    </HBox.margin>
+                </TextField>
+            </HBox>
         </AnchorPane>
 
-        <AnchorPane prefHeight="470.0" prefWidth="400.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="300.0" AnchorPane.topAnchor="30.0">
-            <children>
-                <TableView fx:id="tabela" focusTraversable="false" prefHeight="470.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-                    <columns>
-                        <TableColumn fx:id="id" prefWidth="30.0" styleClass="table-header" text="Id" />
-                  <TableColumn fx:id="dataPostagem" styleClass="table-header" text="Data de modificação" />
-                        <TableColumn fx:id="codigo" styleClass="table-header" text="Código" />
-                        <TableColumn fx:id="modelo" styleClass="table-header" text="Modelo" />
-                        <TableColumn fx:id="tipo" styleClass="table-header" text="Tipo" />
-                        <TableColumn fx:id="fabricante" styleClass="table-header" text="Fabricante" />
-                  <TableColumn fx:id="preco" styleClass="table-header" text="Preço" />
-                    </columns>
-               <columnResizePolicy>
-                  <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
-               </columnResizePolicy>
-                </TableView>
-            </children>
+        <AnchorPane prefHeight="470.0" prefWidth="400.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0"
+                    AnchorPane.rightAnchor="300.0" AnchorPane.topAnchor="30.0">
+            <TableView fx:id="tabela" focusTraversable="false" prefHeight="470.0" prefWidth="600.0"
+                       AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="0.0"
+                       AnchorPane.topAnchor="0.0">
+                <columns>
+                    <TableColumn fx:id="id" prefWidth="30.0" styleClass="table-header" text="Id"/>
+                    <TableColumn fx:id="dataPostagem" styleClass="table-header" text="Data de modificação"/>
+                    <TableColumn fx:id="codigo" styleClass="table-header" text="Código"/>
+                    <TableColumn fx:id="modelo" styleClass="table-header" text="Modelo"/>
+                    <TableColumn fx:id="tipo" styleClass="table-header" text="Tipo"/>
+                    <TableColumn fx:id="fabricante" styleClass="table-header" text="Fabricante"/>
+                    <TableColumn fx:id="preco" styleClass="table-header" text="Preço"/>
+                </columns>
+                <columnResizePolicy>
+                    <TableView fx:constant="CONSTRAINED_RESIZE_POLICY"/>
+                </columnResizePolicy>
+            </TableView>
         </AnchorPane>
     </AnchorPane>
 </AnchorPane>

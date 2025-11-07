@@ -28,7 +28,9 @@ public class Toast {
         root.getChildren().add(toast);
 
         Timeline timeline = new Timeline(
-                new KeyFrame(Duration.seconds(3), _ -> root.getChildren().remove(toast))
+                new KeyFrame(Duration.seconds(3), ignored -> {
+                    root.getChildren().remove(toast);
+                })
         );
         timeline.setCycleCount(1);
         timeline.play();  // Inicia a animação
